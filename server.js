@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const { default: fetch } = require('node-fetch');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +11,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // API endpoint to get weather data
 app.get('/weather', async (req, res) => {
+    // Dynamically import node-fetch inside the async function
+    const { default: fetch } = await import('node-fetch');
+
     const city = req.query.city;
     if (!city) {
         return res.status(400).json({ error: 'City parameter is required' });

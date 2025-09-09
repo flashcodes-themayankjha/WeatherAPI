@@ -1,6 +1,8 @@
 # Weather App
 
 A dynamic, minimalistic, and modern web application that displays weather information for a given city.
+<img width="1184" height="819" alt="image" src="https://github.com/user-attachments/assets/ecf5cbd9-6b48-4f54-94c5-2eeb9076d10d" />
+<img width="401" height="859" alt="image" src="https://github.com/user-attachments/assets/91bcc3ca-70a1-4fb3-98d0-2423dfa96012" />
 
 ## Features
 
@@ -9,6 +11,8 @@ A dynamic, minimalistic, and modern web application that displays weather inform
 *   **City Suggestions:** Input field with a datalist for common city suggestions.
 *   **API Key Management:** Securely load API keys from a `.env` file.
 *   **WeatherAPI.com Integration:** Uses the WeatherAPI.com for fetching weather data.
+<img width="1710" height="954" alt="image" src="https://github.com/user-attachments/assets/2e118929-c521-4555-b356-c4b1f800ba29" />
+
 
 ## Setup and Installation
 

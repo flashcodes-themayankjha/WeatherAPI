@@ -1,0 +1,158 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Soft gradient */
+    color: #333;
+    text-align: center;
+}
+
+.weather-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(220, 220, 220, 0.8);
+    width: 90%;
+    max-width: 450px;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    text-shadow: none;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Increased gap */
+    margin-bottom: 35px;
+}
+
+#cityInput {
+    padding: 16px 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1.2em;
+    width: 60%; /* Reduced width to give more space to button */
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: border-color 0.3s ease;
+}
+
+#cityInput:focus {
+    border-color: #007bff;
+}
+
+#cityInput::placeholder {
+    color: #999;
+}
+
+#getWeatherBtn {
+    padding: 16px 40px; /* Increased horizontal padding */
+    border: none;
+    border-radius: 30px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Horizontally center items */
+}
+
+#getWeatherBtn i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+#getWeatherBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+#getWeatherBtn:active {
+    transform: translateY(0);
+}
+
+.weather-display {
+    margin-top: 25px;
+    padding: 25px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#cityName {
+    font-size: 2.2em;
+    margin-bottom: 12px;
+    color: #3498db;
+    font-weight: 600;
+}
+
+.weather-details p {
+    font-size: 1.6em;
+    margin: 6px 0;
+    color: #555;
+}
+
+#temperature {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+#weatherIcon {
+    width: 90px;
+    height: 90px;
+    margin-top: 15px;
+}
+
+.error-message {
+    color: #e74c3c;
+    margin-top: 18px;
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .input-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cityInput {
+        width: 90%;
+        margin-bottom: 12px;
+    }
+
+    #getWeatherBtn {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    #cityName {
+        font-size: 1.8em;
+    }
+
+    .weather-details p {
+        font-size: 1.4em;
+    }
+}
